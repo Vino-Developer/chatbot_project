@@ -8,7 +8,7 @@ $content-width: 70%;
 $content-padding: 2%;
 
 #chatbot-container{
-    height: 24em;
+    height: 70%;
     overflow-y: auto;
     padding-bottom: 2%;
     display: flex;
@@ -88,4 +88,15 @@ $content-padding: 2%;
   color: $link-color;
   text-decoration: none;
 }
-
+.thankyou{
+  background-color: $content-bg-color;
+  width: $content-width;
+  padding: $content-padding;
+  color: rgb(136, 134, 134);
+}
+.wrong{
+  background-color: $content-bg-color;
+  width: $content-width;
+  padding: $content-padding;
+  color: rgb(136, 134, 134);
+}

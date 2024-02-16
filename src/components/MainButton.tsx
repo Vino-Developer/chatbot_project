@@ -5,14 +5,17 @@ import Features from "./features/Features";
 import KnowMore from "./knowmore/KnowMore";
 import Purpose from "./Purpose";
 import { chatBotProps } from "./ChatBot";
+import Thankyou from "./Thankyou";
+import { useMyContext } from "../Chat";
+import Wrongmessage from "./Wrongmessage";
 
 
 const MainButton = ({search}:chatBotProps) => {
    
-    let initalQuestions=["Purpose FireFlink","Features","Know More..."];
+    let initalQuestions=["Purpose FireFlink","Features","Know More...","exit"];
     let [ans,setAns]=useState<string|null>(null);
     let [res,setResp]=useState<string|React.ReactNode>("");
-
+    let{setUser}=useMyContext();
     console.log(search);
     let handleClick = (val: string|null) => {
      
@@ -33,12 +36,14 @@ const MainButton = ({search}:chatBotProps) => {
             return setAns(val);
           }
           case "exit":{
-            setResp("Thank You...")
+            setResp(<Thankyou/>)
+            setUser(false)
             return setAns(val);
           }
           default: {
             console.log(val);
             // Handle default case if needed
+            setResp(<Wrongmessage/>)
             return setAns(val);
           }
             
