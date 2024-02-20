@@ -1,31 +1,48 @@
-import React, { Fragment, useState } from "react"
+import React, { Fragment, useEffect, useState } from "react"
 import Products from "./items/Products";
 import ContactUs from "./items/ContactUs";
 import Resourses from "./items/Resourses";
 import Container from "./items/Container";
 import Answer from "../Answer";
+import { useMyContext } from "../../Chat";
 
 const KnowMore = () => {
+
+  let {values_1}=useMyContext();
     let values=["Products","Contact Us","Resourses"];
     let[state,setState]=useState<boolean>(false);
     let [ans,setAns]=useState<string|null>(null);
     let [comp,setComp]=useState<React.ReactNode|string>("");
     
     let handleClick = (val: string) => {
+      let newValue=val?.toLowerCase();
         setState(true);
-        switch (val) {
+        switch (newValue) {
           
-          case "Products": {
-            setAns(val);
-             return setComp(<Products/>);
+          case "products": {
+            
+            setTimeout(()=>{
+              setAns(val);
+            },2000);
+             return setTimeout(()=>{
+              setComp(<Products/>)
+             },2000);
           }
-          case "Contact Us": {
-            setAns(val);
-             return setComp(<ContactUs/>)
+          case "contact us": {
+             setTimeout(()=>{
+              setAns(val);
+            },2000);
+             return setTimeout(()=>{
+              setComp(<ContactUs/>)
+             },2000);
           }
-          case "Resourses" :{
-            setAns(val);
-              return setComp(<Resourses/>)
+          case "resourses" :{
+              setTimeout(()=>{
+                setAns(val);
+              },2000);
+               return setTimeout(()=>{
+                setComp(<Resourses/>)
+               },2000);
           }
           default: {
             
@@ -33,6 +50,11 @@ const KnowMore = () => {
             
         }
       };
+      useEffect(()=>{
+        if(values_1!==null){
+          handleClick(values_1)
+        }
+      },[values_1])
 
   return (
     <div>

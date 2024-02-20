@@ -27,13 +27,6 @@ const ChatBot =({search}:chatBotProps) => {
     
      
           {wait&&<MainButton search={search} ></MainButton>}
-      
-
-      
-   
-    
-
-
         </div>
     </div>
   )

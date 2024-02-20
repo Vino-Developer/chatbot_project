@@ -7,11 +7,12 @@ import { createContext, useContext, useState } from "react";
 export type MyContextType={
   user:boolean;
   setUser:React.Dispatch<React.SetStateAction<boolean>>;
+  values_1:string;
 };
 export const contextApi=createContext<MyContextType|null>(null);
 const MyComponent: React.FC = () => {
   let [state,setState]=useState<string>("");
-  let [val,setVal]=useState<null|string>(null);
+  let [values_1,setValues_1]=useState<null|string>(null);
   let[user,setUser]=useState<boolean>(true);
 
   let handleChange=(e:React.ChangeEvent<HTMLInputElement>)=>{
@@ -21,7 +22,8 @@ const MyComponent: React.FC = () => {
   }
   
   let handleClick=()=>{
-      setVal(state);
+      setValues_1(state);
+      setState("");
  }
     return (
       <main>
@@ -34,9 +36,9 @@ const MyComponent: React.FC = () => {
           </header>
           <div id="chatbot-container">
           <div id="inner-chatbot">
-            <contextApi.Provider value={{user,setUser}}>
+            <contextApi.Provider value={{user,setUser,values_1}}>
 
-            <ChatBot search={val}/>
+            <ChatBot search={values_1}/>
             </contextApi.Provider>
             </div>
             

@@ -23,16 +23,23 @@ const MainButton = ({search}:chatBotProps) => {
          switch (newVal) {
           
           case "purpose fireflink": {
-              setResp(<Purpose/>);
+              setTimeout(()=>{
+                setResp(<Purpose/>);
+              },2000);
           return setAns(val)
           }
           case "features": {
-              setResp(<Features/>)
+              setTimeout(()=>{
+                setResp(<Features/>)
+              },2000);
             return setAns(val);
           }
           case "know more...": {
+            
             console.log(val);
-             setResp(<KnowMore/>)
+            setTimeout(()=>{
+              setResp(<KnowMore/>)
+            },2000);
             return setAns(val);
           }
           case "exit":{
@@ -41,17 +48,19 @@ const MainButton = ({search}:chatBotProps) => {
             return setAns(val);
           }
           default: {
-            console.log(val);
-            // Handle default case if needed
+            if(newVal!=="products"&&newVal!=="contact us"&&newVal!=="resourses"){
             setResp(<Wrongmessage/>)
             return setAns(val);
+            }
           }
             
         }
       };
       useEffect(()=>{
      
-        handleClick(search)
+        if(search!==null){
+          handleClick(search)
+        }
       
        
      },[search])
@@ -62,7 +71,7 @@ const MainButton = ({search}:chatBotProps) => {
             initalQuestions.map((val,i)=>{
                 console.log(val);
                 return(
-                    <div>
+                    <div key={i}>
                     <Fragment key={i}>
                         {
                          <button onClick={()=>handleClick(val)}>{val}</button>
