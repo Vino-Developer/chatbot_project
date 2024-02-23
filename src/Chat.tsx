@@ -2,7 +2,8 @@ import "./Chatbot.sass"
 import"./components/Style.scss"
 import { HiPaperAirplane } from "react-icons/hi2";
 import ChatBot from './components/ChatBot';
-import { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
+import { Link } from "react-router-dom";
 
 export type MyContextType={
   user:boolean;
@@ -25,13 +26,24 @@ const MyComponent: React.FC = () => {
       setValues_1(state);
       setState("");
  }
+
+ let KeyEnter=(e:React.KeyboardEvent<HTMLInputElement>)=>{
+  if(e.key==="Enter"){
+    setValues_1(state);
+    setState("");
+  }
+ }
     return (
-      <main>
+      <main className="main">
         <section id="container">
           <header id="head">
             <div id="img"></div>
             <div id="h5">
               <h5>{user?"Active":"InActive"}</h5>
+            </div>
+            <div id='back-btn'><Link to='/mainpage' className='end-chat'>X</Link></div>
+            <div id="h4">
+               <h4>Fire Flink chat bot</h4>
             </div>
           </header>
           <div id="chatbot-container">
@@ -45,7 +57,7 @@ const MyComponent: React.FC = () => {
           </div>
           <footer id="footer">
             <div id="text">
-            <input type="text" placeholder="enter text....." value={state} onChange={handleChange}/>
+            <input type="text" placeholder="enter text....." value={state} onChange={handleChange} onKeyDown={KeyEnter}/>
             <span id="icon" onClick={handleClick}>
               <HiPaperAirplane/>
               </span>

@@ -8,9 +8,11 @@ import { chatBotProps } from "./ChatBot";
 import Thankyou from "./Thankyou";
 import { useMyContext } from "../Chat";
 import Wrongmessage from "./Wrongmessage";
+import { useNavigate } from "react-router-dom";
 
 
 const MainButton = ({search}:chatBotProps) => {
+  let navigate=useNavigate();
    
     let initalQuestions=["Purpose FireFlink","Features","Know More...","exit"];
     let [ans,setAns]=useState<string|null>(null);
@@ -45,7 +47,9 @@ const MainButton = ({search}:chatBotProps) => {
           case "exit":{
             setResp(<Thankyou/>)
             setUser(false)
+           setTimeout(()=>{ navigate('/')},3000)  
             return setAns(val);
+            
           }
           default: {
             if(newVal!=="products"&&newVal!=="contact us"&&newVal!=="resourses"){
@@ -74,7 +78,7 @@ const MainButton = ({search}:chatBotProps) => {
                     <div key={i}>
                     <Fragment key={i}>
                         {
-                         <button onClick={()=>handleClick(val)}>{val}</button>
+                         <button  onClick={()=>handleClick(val)}>{val}</button>
                        }
                        
                       
