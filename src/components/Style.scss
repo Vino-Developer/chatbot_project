@@ -120,4 +120,45 @@ $content-padding: 2%;
   transform: translateY(0);
 }
 }
+//landing page----------------
+.DataContainer h1{
+  font-Family:sans-serif;
+  font-Size:45px;
+  font-Weight:600;
+  padding-Left:5%;
+}
+.subtitle{
+  font-Family:unset; 
+  font-Weight:400;
+  font-Size:20px;
+  padding-Top:6%;
+}
+.DataContainer {
+  width: 44%;
+  height: 40%;
+  padding: 1.5%;
+  padding-top: 5%;
+
+  @media screen and (max-width: 1193px) {
+    .subtitle {
+      font-Weight:300;
+      font-Size:15px;
+      padding-Top:2%;
+    }
+
+  }
+}
+@media screen and (max-width:700px){
+  .svg{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+    gap: 2em;
+  }
+  .DataContainer h1{
+    font-Size:25px;
+  font-Weight:600;
+  padding-Left:5%;
+  }
+}
 

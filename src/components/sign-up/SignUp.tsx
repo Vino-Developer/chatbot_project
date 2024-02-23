@@ -67,7 +67,7 @@ export default function SignUp() {
 
   return (
     <main className='main'>
-    <Box sx={{position:"absolute",top:"50%",left:"50%",transform:"Translate(-50%,-50%)" ,bgcolor:'white',width:"35%" ,height:"70%"}}>
+    <Box sx={{position:"absolute",top:"50%",left:"50%",transform:"Translate(-50%,-50%)" ,bgcolor:'white',width:"35%" ,height:"80%"}}>
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />

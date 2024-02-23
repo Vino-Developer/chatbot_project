@@ -34,9 +34,9 @@ export default function LandingPage() {
     <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
       <CssBaseline />
       <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
-      <div  className="svg" style={{ width:"100%" ,height:"80vh",marginTop:"5.7%",paddingLeft:"10%"}}>
-        <div style={{ width: '50%', maxWidth: '50%' }}>
-      <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="665.9983" height="547.77798" viewBox="0 0 965.9983 727.77798" xmlnsXlink="http://www.w3.org/1999/xlink">
+      <div  className="svg"style={{ width: "100%", height: "80vh", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ width: '50%', maxWidth: '50%', paddingTop:'13%' }}>
+      <svg  xmlns="http://www.w3.org/2000/svg"data-name="Layer 1" width="100%"height="100%" viewBox="0 0 965.9983 727.77798"xmlnsXlink="http://www.w3.org/1999/xlink">
             <path d="M843.99644,259.05824h-3.99878V149.51291a63.40188,63.40188,0,0,0-63.4018-63.4019H544.50913a63.40183,63.40183,0,0,0-63.402,63.40171V750.48713A63.40181,63.40181,0,0,0,544.509,813.889H776.59556a63.40185,63.40185,0,0,0,63.402-63.40167V337.0345h3.99884Z" transform="translate(-117.00085 -86.11101)" fill="#3f3d56"/>
             <path d="M779.15391,102.606h-30.295a22.49487,22.49487,0,0,1-20.82715,30.99053H595.07231A22.4948,22.4948,0,0,1,574.24516,102.606h-28.2956a47.34782,47.34782,0,0,0-47.34784,47.34774V750.04628a47.34781,47.34781,0,0,0,47.34778,47.34784H779.15391a47.34781,47.34781,0,0,0,47.34784-47.34778h0V149.95372A47.34778,47.34778,0,0,0,779.15391,102.606Z" transform="translate(-117.00085 -86.11101)" fill="#fff"/>
             <ellipse className='shadow' cx="593.85804" cy="272.70788" rx="42" ry="4" fill="#e6e6e6"/>
@@ -71,9 +71,9 @@ export default function LandingPage() {
             <path d="M426.27387,813.889H118.253a1.25212,1.25212,0,0,1,0-2.50424h308.0209a1.25212,1.25212,0,0,1,0,2.50424Z" transform="translate(-117.00085 -86.11101)" fill="#ccc"/>
           </svg>
           </div>
-          <div className='Data' style={{ width:"44%" ,height:'40%',position:'absolute', left:'55%', top:"30%", padding:"1.5%" }} >
-              <h1 style={{fontFamily:'sans-serif', fontSize:'45px', fontWeight:'600', paddingLeft:'5%'}}>EXTREME AUTOMATION</h1>
-              <h4 style={{fontFamily:"unset", fontWeight:'400',fontSize:'20px', paddingTop:'6%'}}>A unified scriptless automation testing tool for all your software testing needs, optimised for incredibly short agile sprints! A breakthrough in the software ecosystem enabling faster app testing. You heard it right!
+          <div className='DataContainer'>
+              <h1>EXTREME AUTOMATION</h1>
+              <h4  className="subtitle" >A unified scriptless automation testing tool for all your software testing needs, optimised for incredibly short agile sprints! A breakthrough in the software ecosystem enabling faster app testing. You heard it right!
               Testing can now sync upto the speed of extreme agile development pace.</h4>
           </div>
         </div>
