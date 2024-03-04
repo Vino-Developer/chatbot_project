@@ -21,9 +21,10 @@ Tech Stack :
 Backend: json-server
 
 Work Division :
+
  
   a) Vinoth Kumar R : Functionality and login and sign up Page using Json-server
-	b) Ramya sri      : Ui designing , flow of structure and functinality
-	c) Khusboo Kumari : Ui designing , flow of structure and functinality
+  b) Ramya sri      : Ui designing , flow of structure and functinality
+  c) Khusboo Kumari : Ui designing , flow of structure.
   d) Saravanan S    : Functionality and login and sign up Page using Json-server
 
