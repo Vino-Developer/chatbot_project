@@ -5,7 +5,10 @@ Project Name : Chatbot UI
 project topic : Chatbot UI
 Team Name : Brain Trust
 Team Lead : Vishwanath Koli,Padmakant
-Team Devs : Vinoth Kumar R,Ramya sri,Khusbookumari,Saravanan S
+Team Devs : Vinoth Kumar R,
+            Ramya sri,
+	    Khusbookumari,
+            Saravanan S
 
 Tech Stack : 
 	a) Typescript-React
